@@ -43,3 +43,14 @@ def upload_files(upload_type):
 @flow(log_prints=True)
 def flow1(upload_type):
     upload_files(upload_type)
+    return "flow1"
+
+
+# if __name__ == "__main__":
+#     flow1.from_source(
+#         source="https://github.com/sushilkhadka165/prefect-testing.git",
+#         entrypoint="/mnt/veracrypt1/d_tests/prefect_test/flow1.py:flow1"
+#     ).deploy(
+#         name="upload-service",
+#         work_pool_name="upload_flow",
+#     )
